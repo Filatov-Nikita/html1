@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .wrapper {
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    @apply t-mx-auto;
+
+    @screen sm {
+      max-width: 640px;
+    }
+
+    @screen md {
+      max-width: 768px;
+    }
+
+    @screen lg {
+      max-width: 1024px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    @screen xl {
+      max-width: 1280px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+
+  .row {
+    @apply t-flex t-flex-wrap;
+  }
+
+  .gutter-col-y-md {
+    @apply -t-ml-3;
+  }
+
+  .gutter-col-y-md > * {
+    @apply t-pl-3;
+  }
+
+  .gutter-col-md {
+    @apply -t-ml-3 -t-mt-8;
+  }
+
+  .gutter-col-md > * {
+    @apply t-pl-3 t-pt-8;
+  }
+}
+
+@layer base {
+  html {
+    font-size: 10px;
+    @apply t-font-body;
+  }
+
+  @media screen and (min-width: 370px) {
+    html {
+      @apply t-text-xs
+    }
+  }
+
+  @screen lg {
+    html {
+      @apply t-text-base
+    }
+  }
+
+  body {
+    @apply t-text-base;
+  }
+
+  input:focus {
+    outline: none;
+  }
+
+  h1, .h1 {
+    @apply t-text-5xl t-font-bold;
+  }
+
+  h2, .h2 {
+    @apply t-text-3xl t-font-bold;
+  }
+
+  h3, .h3 {
+    @apply t-text-1.1xl t-font-semibold
+  }
+
+  a, .link {
+    @apply t-text-primary t-underline;
+  }
+}

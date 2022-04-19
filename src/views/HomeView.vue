@@ -1,18 +1,37 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <main>
+    <ScreenHeader />
+    <ScreenTA />
+    <ScreenPain />
+    <ScreenDecision />
+    <ScreenProgram />
+    <ScreenLearning />
+    <ScreenAuthor />
+    <ScreenFooter />
+  </main>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import ScreenHeader from '@/components/ScreenHeader.vue';
+import ScreenDecision from '@/components/ScreenDecision.vue';
+import ScreenPain from '@/components/ScreenPain.vue';
+import ScreenProgram from '@/components/ScreenProgram.vue';
+import ScreenFooter from '@/components/ScreenFooter.vue';
+import ScreenLearning from '@/components/ScreenLearning.vue';
+import ScreenAuthor from '@/components/ScreenAuthor.vue';
+import ScreenTA from '@/components/ScreenTA.vue';
 
 export default {
   name: 'HomeView',
   components: {
-    HelloWorld
+    ScreenHeader,
+    ScreenPain,
+    ScreenDecision,
+    ScreenProgram,
+    ScreenFooter,
+    ScreenLearning,
+    ScreenAuthor,
+    ScreenTA
   }
 }
 </script>
