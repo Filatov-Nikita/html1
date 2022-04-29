@@ -2,7 +2,7 @@
   <section class="t-pt-20">
     <div class="wrapper t-relative">
       <h2 class="t-mb-10">Онлайн-курс для новичков</h2>
-      <div class="t-flex">
+      <div class="t-flex ta">
         <div class="md:t-w-1/2">
           <h3 class="t-mb-8">Курс подходит вам, если вы имеете представление:</h3>
           <ul>
@@ -19,10 +19,6 @@
             </li>
           </ul>
         </div>
-        <div class="t-w-2/4 t-relative t-hidden md:t-block md:-t-mt-36">
-          <img class="t-absolute t-w-full -t-z-10" src="img/ta.svg" />
-          <div style="padding-bottom: 66.25%"></div>
-        </div>
       </div>
     </div>
   </section>
@@ -34,6 +30,36 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.ta::after {
+  content: '';
+  background: url('@/assets/ta.svg') no-repeat;
+  background-position-x: 20px;
+  display: block;
+  @apply t-relative md:-t-mt-36;
+}
 
+@screen sm {
+  .ta:after {
+    width: 310px;
+    height: 179px;
+    background-size: 310px;
+  }
+}
+
+@screen md {
+.ta:after {
+    width: 410px;
+    height: 279px;
+    background-size: 410px;
+  }
+}
+
+@screen lg {
+.ta:after {
+    width: 510px;
+    height: 379px;
+    background-size: 510px;
+  }
+}
 </style>

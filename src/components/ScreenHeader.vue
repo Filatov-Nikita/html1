@@ -1,6 +1,6 @@
 <template>
-  <div class="header t-overflow-hidden">
-    <div class="wrapper t-relative">
+  <div class="header t-overflow-hidden t-relative">
+    <div class="wrapper t-relative cover">
       <div class="t-max-w-2xl">
         <p class="t-text-sm t-font-semibold">Курсы Никиты Антонова</p>
         <div class="t-pt-28 t-relative t-z-10">
@@ -16,10 +16,10 @@
             <p class="t-font-semibold t-text-xs lg:t-text-sm">Уровень: начинающий</p>
           </div>
         </div>
-        <img class="cover" src="img/layer.png"/>
-        <img class="man" src="img/man.svg"/>
+        <InlineSvg class="man" :src="require('@/assets/man.svg')"/>
       </div>
     </div>
+    <InlineSvg class="t-absolute t-left-0 t-top-0" style="z-index: -1" width="100%" height="100%" :src="require('@/assets/bg.svg')" />
   </div>
 </template>
 
@@ -36,22 +36,20 @@ export default {
 
 <style scoped>
 .header {
-  @apply t-text-white t-pt-4 t-pb-12 lg:t-pb-72 t-relative;
-  background: linear-gradient(
-    179.78deg,
-    rgba(50, 59, 255, 0.92) 2.34%,
-    rgba(0, 8, 205, 0.79) 28.27%,
-    rgba(6, 14, 209, 0.89) 68.59%,
-    #0036c0 93.78%
-  );
+  @apply t-text-white t-pt-4 t-pb-28 lg:t-pb-48 t-relative;
 }
 
-.cover {
-  @apply t-absolute;
+.cover::after {
+  content: "1";
+  display: block;
+  background: url('@/assets/layer.png?as=webp') no-repeat;
+  background-size: 100%;
   z-index: -2;
   top: 38px;
   right: 0px;
   width: 250px;
+  height: 250px;
+  @apply t-absolute;
 }
 
 .man {
@@ -59,17 +57,10 @@ export default {
   z-index: 0;
 }
 
-@screen sm {
-  .cover {
-    width: 45%;
-    top: 42px;
-    right: 0px;
-  }
-}
-
 @screen md {
-  .cover {
-    width: 38%;
+  .cover::after {
+    width: 291px;
+    height: 291px;
     top: 42px;
     right: 0px;
   }
@@ -83,7 +74,9 @@ export default {
 }
 
 @screen lg {
-  .cover {
+  .cover::after {
+    width: 389px;
+    height: 389px;
     top: 83px;
     right: -45px;
   }
@@ -96,8 +89,9 @@ export default {
 }
 
 @screen xl {
-  .cover {
-    width: 50%;
+  .cover::after {
+    width: 640px;
+    height: 640px;
     top: 43px;
     right: -30px;
   }
@@ -107,5 +101,10 @@ export default {
     top: 64px;
     right: 10px;
   }
+
+  .header {
+    min-height: 786px
+  }
+
 }
 </style>

@@ -4,8 +4,8 @@ smoothscroll.polyfill();
 
 import { createApp } from 'vue'
 import App from './App.vue'
-import router from './router'
-import store from './store'
+// import router from './router'
+// import store from './store'
 
 import '@/assets/app.scss';
 
@@ -16,4 +16,5 @@ app.component('BButton', require('@/components/BButton.vue').default);
 app.component('BInput', require('@/components/BInput.vue').default);
 app.component('InlineSvg', require('vue-inline-svg'));
 app.directive('maska', require('maska').maska);
-app.use(store).use(router).mount('#app')
+// app.use(store).use(router)
+app.mount('#app')

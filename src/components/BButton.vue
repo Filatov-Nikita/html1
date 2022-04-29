@@ -1,6 +1,8 @@
 <template>
   <button
+    :name="design === 'primary' ? 'order' : 'programm'"
     v-bind="{ type, onClick: type === 'button' ? onClick : null }"
+    class="button-main"
     :class="{
       'button-primary': design === 'primary',
       'button-secondary': design === 'secondary',
@@ -48,11 +50,27 @@ export default {
   @apply t-bg-secondary t-text-black;
 }
 
+.button-main::after {
+  content: '';
+  background: rgba(0, 0, 0, 1);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  @apply t-rounded-2xl t-transition-opacity t-duration-100;
+}
+
+.button-main:hover::after {
+  opacity: 0.1;
+}
+
 .button-secondary {
   @apply t-text-white t-z-10;
 }
 
-.button-secondary::after {
+.button-secondary::before {
   content: '';
   @apply t-absolute t-inset-0 t-border t-border-solid t-border-white t-rounded-2xl t-z-0;
 }

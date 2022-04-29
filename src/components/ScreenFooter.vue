@@ -31,13 +31,13 @@
         </div>
         <div class="t-w-full md:t-w-1/2 t-mt-16 md:t-mt-0 md:t-px-4">
           <p class="t-text-lg t-mb-5">Ваши контакты:</p>
-          <form class="t-bg-white t-rounded-2xl t-block t-px-12 t-py-14 t-pb-9 t-text-center">
+          <form @submit="1" class="t-bg-white t-rounded-2xl t-block t-px-12 t-py-14 t-pb-9 t-text-center">
             <div class="t-space-y-6">
               <BInput required name="name" label="Имя"/>
               <BInput required v-maska="'+7 (###) ###-##-##'" name="tel" label="Телефон" type="tel" />
               <BInput required name="email" label="E-mail" type="email" />
             </div>
-            <BButton class="t-mt-8 t-mx-auto t-block t-mb-6 t-w-full">записаться на курс</BButton>
+            <BButton class="t-mt-8 t-mx-auto t-block t-mb-6 t-w-full" type="submit">записаться на курс</BButton>
             <div class="t-text-black t-text-xs">Нажимая на кнопку, я даю согласие на <a class="link" href="#">обработку персональных данных</a></div>
           </form>
         </div>

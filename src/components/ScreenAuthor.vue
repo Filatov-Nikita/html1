@@ -12,7 +12,11 @@
         </div>
 
         <div class="md:t-ml-16 md:t-max-w-sm md:t-order-1 md:t-mx-0 t-max-w-xs t-mx-auto t-relative -t-top-3 -t-order-1">
-          <img src="img/author.png" alt="Никита Антонов - автор курса">
+          <picture>
+            <source type="image/webp" srcset="@/assets/author.png?as=webp 1x, @/assets/author-2x.png?as=webp 2x" />
+            <source type="image/png" srcset="@/assets/author.png 1x, @/assets/author-2x.png 2x" />
+            <img width="411" height="402" src="@/assets/author.png" alt="Никита Антонов - автор курса" loading="lazy">
+          </picture>
         </div>
       </div>
     </div>
