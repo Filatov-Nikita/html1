@@ -45,19 +45,19 @@ export default {
   }
 
   .emogi-1::before {
-    background-image: url('@/assets/d1-1x.png?as=webp');
+    background-image: url('@/assets/d1-1x.png');
     background-image: image-set(url('@/assets/d1-1x.png?as=webp') 1x, url('@/assets/d1-2x.png?as=webp') 2x);
     background-size: 100%;
   }
 
   .emogi-2::before {
-    background-image: url('@/assets/d2-1x.png?as=webp');
+    background-image: url('@/assets/d2-1x.png');
     background-image: image-set(url('@/assets/d2-1x.png?as=webp') 1x, url('@/assets/d2-2x.png?as=webp') 2x);
     background-size: 100%;
   }
 
   .emogi-3::before {
-    background-image: url('@/assets/d3-1x.png?as=webp');
+    background-image: url('@/assets/d3-1x.png');
     background-image: image-set(url('@/assets/d3-1x.png?as=webp') 1x, url('@/assets/d3-2x.png?as=webp') 2x);
     background-size: 100%;
   }

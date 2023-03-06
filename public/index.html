@@ -9,7 +9,6 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
     <noscript>
@@ -17,5 +16,13 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <script>
+      (function load() {
+        const link = document.createElement('link');
+        link.href = 'https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap';
+        link.rel = 'stylesheet';
+        document.body.appendChild(link);
+      })()
+    </script>
   </body>
 </html>

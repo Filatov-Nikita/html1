@@ -10,6 +10,12 @@ module.exports = defineConfig({
         args[0].title = 'Базовый курс по html и css верстке';
         return args;
       });
+
+    config.module.rule('images').parser({
+      dataUrlCondition: {
+        maxSize: 1024
+      }
+    })
   },
   transpileDependencies: true,
   configureWebpack: {

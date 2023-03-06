@@ -11,7 +11,7 @@
             <p class="t-text-xl t-font-semibold t-pb-4">Стоимость обучения</p>
             <div class="t-flex t-items-center t-space-x-16 t-mb-3">
               <p class="t-text-3xl t-font-bold t-text-secondary">25 900 руб</p>
-              <p class="t-line-through t-text-platina t-font-bold t-text-1.1xl">
+              <p class="t-line-through t-text-serebro t-font-bold t-text-1.1xl">
                 37 900 руб
               </p>
             </div>
